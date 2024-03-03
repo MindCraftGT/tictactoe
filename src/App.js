@@ -13,11 +13,11 @@ onClick={onSquareClick}
 
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
-    // returning early if the square already the X value in it. Avoidng overwrting the clicked value in teh square.
+    // returning early if the square already the X value in it. Avoidng overwriting the clicked value in the square.
     if (calculateWinner(squares) || squares[i] ) {
       return;
     }
-    const nextSquares = squares.slice(); // making a copy of the sqaures array.
+    const nextSquares = squares.slice(); // making a copy of the squares array.
     if (xIsNext) {
       nextSquares[i] ='X';
     } else {
